@@ -4,12 +4,7 @@ import { NativeScriptRouterModule, NSModuleFactoryLoader } from "nativescript-an
 
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
-
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from "nativescript-angular/forms";
-
-// Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
-// import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { ProfileService } from './profiles/services/profile.service';
 
 @NgModule({
     bootstrap: [
@@ -24,7 +19,8 @@ import { AppComponent } from "./app.component";
         AppComponent,
     ],
     providers: [
-        { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader }
+        { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader },
+        ProfileService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -5,6 +5,7 @@ export class Profile {
         public MiddleName: string,
         public LastName: string,
         public Address: string,
+        public Date: number,
         public Photo?: string,
     ) { }
 }

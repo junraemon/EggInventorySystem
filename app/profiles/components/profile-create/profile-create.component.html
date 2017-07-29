@@ -1,0 +1,36 @@
+<ActionBar title="Add New Customer" class="action-bar">
+  <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+  <ActionItem android.systemIcon="ic_menu_invite" (tap)="createProfile()"></ActionItem>
+</ActionBar>
+
+<ScrollView>
+  <StackLayout class="form">
+
+    <StackLayout class="input-field">
+      <Label text="First Name(required)" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="profile.FirstName"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+
+    <StackLayout class="input-field">
+      <Label text="Middle Name(required)" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="profile.MiddleName"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+
+    <StackLayout class="input-field">
+      <Label text="Last Name(required)" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="profile.LastName"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+
+    <StackLayout class="input-field">
+      <Label text="Address(required)" class="label font-weight-bold m-b-5"></Label>
+      <TextView height="200px" class="input" [(ngModel)]="profile.Address"></TextView>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+
+    <Button class="btn btn-primary btn-lg" id="button" text="Create Profile" (tap)="createProfile()"></Button>
+
+  </StackLayout>
+</ScrollView>

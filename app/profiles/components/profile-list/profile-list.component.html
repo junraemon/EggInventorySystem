@@ -1,6 +1,20 @@
 <ActionBar title="Customer List" class="action-bar">
-  <ActionItem android.systemIcon="ic_menu_btn_add"></ActionItem>
+  <ActionItem android.systemIcon="ic_menu_btn_add" [nsRouterLink]="['/create']"></ActionItem>
 </ActionBar>
-<StackLayout class="p-10">
-    <Label text="Profile List" class="h1" textWrap="true"></Label>
+
+<StackLayout>
+  <SearchBar #searchBar hint="Search" (loaded)="onSearchBarLoaded()" (textChange)="search(searchBar.text)"></SearchBar>
+  <ListView class="list-group" [items]="profileList" (itemTap)="profileDetails($event)">
+    <ng-template let-profile="item">
+      <GridLayout class="list-group-item" columns="auto, *">
+        <StackLayout col="1">
+          <Label class="list-group-item-heading" text="{{ profile.FirstName }} {{ profile.MiddleName }}, {{ profile.LastName }} "></Label>
+          <Label class="list-group-item-text" [text]="profile.Address" textWrap="false"></Label>
+        </StackLayout>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+  <GridLayout class="loader-container" [visibility]="!isLoaded ? 'visible' : 'collapsed'">
+    <ActivityIndicator width="30" height="30" [busy]="!isLoaded" class="activity-indicator"></ActivityIndicator>
+  </GridLayout>
 </StackLayout>
