@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1022132549493",
+    "firebase_url": "https://egg-inventory-system.firebaseio.com",
+    "project_id": "egg-inventory-system",
+    "storage_bucket": "egg-inventory-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022132549493:android:f59f36725157109c",
+        "android_client_info": {
+          "package_name": "org.nativescript.EggInventorySystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022132549493-tt3imiaidq1nsg07av18csc9af6tu9rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI0sfJIDIClqcLglmNUq5Rt7HinEn46KU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
